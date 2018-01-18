@@ -18,8 +18,8 @@
          but.trigger('click');
          this.repeatCount++;
          
-         setTimeout(repeat.bind(this), this.speed);
-      }.bind(this), this.speed);
+         setTimeout(repeat.bind(this), this._getSpeed());
+      }.bind(this), this._getSpeed());
    }
    
    fn.stop = function() {
@@ -28,6 +28,10 @@
    
    fn._getBallonButton = function() {
       return $('.balloon__content__btn__play__icon').eq(+this.slow);
+   }
+   
+   fn._getSpeed = function() {
+      return (this.slow) ? this.speed * 3 : this.speed;
    }
    
    fn._createParametrs = function(options) {
@@ -42,7 +46,7 @@
    
 }());
 
-var ar = new AutoRepeat({
+var r = new AutoRepeat({
    run: true,
    speed: 1500,
    slow: false,

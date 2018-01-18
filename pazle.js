@@ -96,4 +96,30 @@ window.p = 1
 var i = setInterval(()=>{
 	var bt = $('.balloon__content__btn__play__icon')[0];
 	if(window.p && bt) {$(bt).trigger('click'); console.log('click')}
-}, window.t || 2000);*/
+}, window.t || 2000);
+
+*/
+
+
+
+дождь
+снег
+ветер
+погода
+море
+океат
+река
+лед
+камень
+дерево
+облака
+небо
+
+вода
+хлеб
+
+завтрак
+ужин
+
+готовить
+магазин
